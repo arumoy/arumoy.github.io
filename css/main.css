@@ -1,0 +1,33 @@
+.rem1Margin {
+    margin: 1rem;
+}
+
+.librebask {
+    font-family: 'Libre Baskerville', serif;
+}
+
+.josefin {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 20px !important;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    display: inline;
+    color: white;
+    text-decoration-line: none !important;
+}
+
+a:link,
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover,
+a:active {
+    text-decoration-color: white;
+}
