@@ -1,0 +1,87 @@
+    * {
+
+        box-sizing: border-box;
+
+        margin: 0px;
+
+        border: 0px;
+
+        padding: 0px;
+
+        background-color: #037c5e;
+
+    }
+
+    
+
+    #bowl {
+
+        font-size: 100px;
+
+        position: fixed;
+
+        top: 50%;
+
+        left: 50%;
+
+        margin-top: -50px;
+
+        margin-left: -50px;
+
+        /**/
+
+        z-index: -1;
+
+    }
+
+    
+
+    #shit {
+
+        font-size: 40px;
+
+        width: 20px;
+
+        height: 20px;
+
+        animation-duration: 1s;
+
+        animation-timing-function: linear;
+
+        animation-iteration-count: infinite;
+
+        animation-name: bounce;
+
+        /* */
+
+        position: fixed;
+
+        top: 50%;
+
+        left: 50%;
+
+        margin-top: -40px;
+
+        margin-left: -40px;
+
+    }
+
+    
+
+    @keyframes bounce {
+
+        0%,
+
+        100% {
+
+            transform: translateY(0);
+
+        }
+
+        50% {
+
+            transform: translateY(-50px);
+
+        }
+
+    }
