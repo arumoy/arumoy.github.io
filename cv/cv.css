@@ -5,6 +5,12 @@
 body {
     max-width: 800px;
     margin: auto;
+    padding-bottom: 50px;
+    line-height: 1.2;
+}
+
+a, a:visited {
+    text-decoration: none;
 }
 
 h1 {
@@ -34,10 +40,6 @@ h4 {
     vertical-align: middle;
 }
 
-#intro {
-    line-height: 1.2;
-}
-
 .cv-section {
     margin: 5px;
 }
@@ -48,7 +50,7 @@ h4 {
 }
 
 .experience-content {
-    line-height: 1.2;
+    
 }
 
 .skill {
@@ -57,10 +59,8 @@ h4 {
 
 .exp-milestone {
     list-style-type: '💡  ';
-    line-height: 1.2;
 }
 
 .education {
     list-style-type: '📘  ';
-    line-height: 1.2;
 }
