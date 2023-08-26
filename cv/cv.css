@@ -6,3 +6,42 @@ body {
     max-width: 800px;
     margin: auto;
 }
+
+h1 {
+    text-align: center;
+}
+
+#contact-bar {
+    text-align: center;
+    margin: 0;
+    padding: 0%;
+}
+
+#icon-linkedin {
+    height: 15px;
+    width: 15px;
+    vertical-align: middle;
+    transform: translate(0, -20%);
+}
+
+.contact-bar-vert {
+   padding-left: 10px;
+   padding-right: 10px;
+    vertical-align: middle;
+}
+
+#intro {
+    line-height: 1.2;
+}
+
+.cv-section {
+    margin: 5px;
+}
+
+#skill-tab {
+    width: 100%;
+}
+
+.skill {
+    width: 25%;
+}
