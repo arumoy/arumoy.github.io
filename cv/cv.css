@@ -38,10 +38,11 @@ h1 {
     margin: 5px;
 }
 
-#skill-tab {
+#skill-list {
     width: 100%;
+    column-count: 4;
 }
 
 .skill {
-    width: 25%;
+    list-style-type: disc;
 }
