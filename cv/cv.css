@@ -5,4 +5,62 @@
 body {
     max-width: 800px;
     margin: auto;
+    padding-bottom: 50px;
+    line-height: 1.2;
+}
+
+a, a:visited {
+    text-decoration: none;
+}
+
+h1 {
+    text-align: center;
+}
+
+h4 {
+    margin-bottom: 0;
+}
+
+#contact-bar {
+    text-align: center;
+    margin: 0;
+    padding: 0%;
+}
+
+#icon-linkedin {
+    height: 15px;
+    width: 15px;
+    vertical-align: middle;
+    transform: translate(0, -20%);
+}
+
+.contact-bar-vert {
+    padding-left: 5px;
+    padding-right: 5px;
+    vertical-align: middle;
+}
+
+.cv-section {
+    margin: 5px;
+}
+
+#skill-list {
+    width: 100%;
+    column-count: 4;
+}
+
+.experience-content {
+    
+}
+
+.skill {
+    list-style-type: '🔨 ';
+}
+
+.exp-milestone {
+    list-style-type: '💡  ';
+}
+
+.education {
+    list-style-type: '📘  ';
 }
