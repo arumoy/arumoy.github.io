@@ -11,6 +11,10 @@ h1 {
     text-align: center;
 }
 
+h4 {
+    margin-bottom: 0;
+}
+
 #contact-bar {
     text-align: center;
     margin: 0;
@@ -25,8 +29,8 @@ h1 {
 }
 
 .contact-bar-vert {
-   padding-left: 10px;
-   padding-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     vertical-align: middle;
 }
 
@@ -43,6 +47,20 @@ h1 {
     column-count: 4;
 }
 
+.experience-content {
+    line-height: 1.2;
+}
+
 .skill {
-    list-style-type: disc;
+    list-style-type: '🔨 ';
+}
+
+.exp-milestone {
+    list-style-type: '💡  ';
+    line-height: 1.2;
+}
+
+.education {
+    list-style-type: '📘  ';
+    line-height: 1.2;
 }
