@@ -11,6 +11,7 @@ body {
 
 a, a:visited {
     text-decoration: none;
+    decoration: none;
 }
 
 h1 {
