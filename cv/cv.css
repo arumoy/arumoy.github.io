@@ -85,7 +85,7 @@ li.employer, li.experience, li.exp-milestone {
 }
 
 @media only screen and (min-width: 768px) { /* for desktop */
-    .contact-elemnt      {
+    .contact-element      {
         display: inline
     }
 
