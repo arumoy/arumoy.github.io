@@ -79,6 +79,10 @@ footer {
     padding: 1%;
 }
 
+.contact-icon {
+    padding-right: 2%;
+}
+
 [class*="col-"] {
     width: 100%;
 }
@@ -92,6 +96,10 @@ li.employer, li.experience, li.exp-milestone {
     .contact-element      {
         display: inline;
         padding: 0%;
+    }
+
+    .contact-icon {
+        padding-right: 1%;
     }
 
     .contact-bar-vert {
