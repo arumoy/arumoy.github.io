@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Calculator by Arumoy</title>
+    <link rel="icon" type="image/x-icon" href="/icons/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
+    <link href="pizza.css" rel="stylesheet">
+</head>
+
+<body class="league-spartan">
+    <noscript>
+        <div style="margin: 5px; padding-top: 10%; text-align: center;">
+            This page needs JS enabled to function, as all the calculations and such happens in your browser.
+        </div>
+    </noscript>
+    <div id="dough">
+        <div>
+            <table>
+                <tr>
+                    <td><label>Size </label></td>
+                    <td><input type="number" id="pizza-size"></td>
+                </tr>
+                <tr>
+                    <td><label>Name </label></td>
+                    <td><input type="text" id="pizza-name"></td>
+                </tr>
+                <tr>
+                    <td><label>Price </label></td>
+                    <td><input type="number" id="pizza-price"></td>
+                </tr>
+                <tr>
+                    <td><label>Compare Visually</label></td>
+                    <td><input id="compare-vis" type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td><button type="button" onclick="addPizza()">Add</button></td>
+                    <td><button type="button" onclick="computePizza()">Calculate</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" onclick="clearTable()">Clear Table</button></td>
+                    <td><button type="button" onclick="clearData()">Clear Data</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div id="furnace"><!-- Will be filled computationally --></div>
+    <script src="pizza.js"></script>
+</body>
+
+</html>

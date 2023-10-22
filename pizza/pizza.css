@@ -1,0 +1,25 @@
+.league-spartan {
+    font-family: 'League Spartan', sans-serif;
+}
+
+body {
+    max-width: 800px;
+    margin: auto;
+    padding: 1%;
+}
+
+#furnace {
+    padding: 2%;
+}
+
+#pizzalysis {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 1%;
+}
+
+.pizza-data {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 1%;
+}
