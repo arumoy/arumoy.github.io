@@ -42,9 +42,14 @@ function addPizza() {
 
 function rowOf(...data) {
     var row = document.createElement("tr");
-    data.forEach(function (d, _, _) {
+    data.forEach(function (d, index, rowData) {
         var val = document.createElement("td");
         val.classList.add("pizza-data")
+        if(index == 0) {
+            val.classList.add("text-align-left")
+        } else if (index == rowData.length - 1) {
+            val.classList.add("text-align-center")
+        }
         if(d instanceof Node) {
             val.appendChild(d);
         } else {
@@ -57,9 +62,9 @@ function rowOf(...data) {
 
 function headerOf(...data) {
     var row = document.createElement("tr");
-    data.forEach(function (d, _, _) {
+    data.forEach(function (d, index, rowData) {
         var val = document.createElement("th");
-        val.classList.add("pizza-data")
+        val.classList.add("pizza-data", "text-align-center");
         val.innerHTML = d;
         row.appendChild(val);
     });
