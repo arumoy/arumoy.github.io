@@ -5,6 +5,7 @@
 body {
     max-width: 800px;
     margin: auto;
+    line-height: 130%;
 }
 
 a, a :visited, a :focus, a :active, a :hover {
