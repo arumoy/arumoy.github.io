@@ -6,3 +6,11 @@ body {
     max-width: 800px;
     margin: auto;
 }
+
+a, a :visited, a :focus, a :active, a :hover {
+    text-decoration: none;
+    color: rgb(12, 90, 126);
+    background-color: rgb(206, 206, 206);
+    padding: 5px;
+    border-radius: 5px;
+}
