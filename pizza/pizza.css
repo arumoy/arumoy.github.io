@@ -18,6 +18,15 @@ body {
     padding: 1%;
 }
 
+#error-message {
+    display: none;
+    background-color: rgb(182, 29, 29);
+    padding: 2%;
+    color: lightgray;
+    font-weight: bolder;
+    font-style: italic;
+}
+
 .pizza-data {
     border: 1px solid black;
     border-collapse: collapse;

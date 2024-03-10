@@ -26,11 +26,13 @@ function addPizza() {
     var sizeInp = document.getElementById("pizza-size");
     var nameInp = document.getElementById("pizza-name");
     var priceInp = document.getElementById("pizza-price");
+
+    validateInput(sizeInp, priceInp);
+
     var size = Number(sizeInp.value);
     var name = nameInp.value;
     var price = Number(priceInp.value);
     sizeInp.value = nameInp.value = priceInp.value = null;
-
     if (name == null || name == undefined || name === "") {
         computePizza(addComparablePizza(pizzaId++, size / 2, price));
     } else {
@@ -87,4 +89,39 @@ function computePizza(pizza) {
 
 function clearTable() {
     document.getElementById("furnace").innerHTML = null;
+}
+
+function validateInput(...inputs) {
+    var missings = [];
+    inputs.forEach(function(d, index, allInputs){
+        if(d.value === '')
+            missings.push(d.name);
+    });
+    if(missings.length > 0) {
+        showError(missings);
+    } else {
+        hideError();
+    }
+}
+
+function showError(message) {
+    var error = document.getElementById("error-message");
+    if(error != null) {
+        error.style.display = 'inline-block';
+        var errorMessage = message + " fields are mandatory";
+        error.innerHTML = errorMessage;
+        throw Error(errorMessage);
+    } else {
+        throw Error("Can't even find the error-message element!");
+    }
+}
+
+function hideError() {
+    var error = document.getElementById("error-message");
+    if(error != null) {
+        error.style.display = 'none';
+        error.innerHTML = "";
+    } else {
+        throw Error("Can't even find the error-message element!");
+    }
 }

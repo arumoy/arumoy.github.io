@@ -24,7 +24,7 @@
             <table>
                 <tr>
                     <td><label>Size </label></td>
-                    <td><input type="number" id="pizza-size"></td>
+                    <td><input type="number" id="pizza-size" name="Size"></td>
                 </tr>
                 <tr>
                     <td><label>Name </label></td>
@@ -32,7 +32,7 @@
                 </tr>
                 <tr>
                     <td><label>Price </label></td>
-                    <td><input type="number" id="pizza-price"></td>
+                    <td><input type="number" id="pizza-price" name="Price"></td>
                 </tr>
                 <tr>
                     <td><button type="button" onclick="addPizza()">Add</button></td>
@@ -40,6 +40,9 @@
                 </tr>
             </table>
         </div>
+    </div>
+    <div>
+        <span id="error-message"></span>
     </div>
     <div id="furnace"><!-- Will be filled computationally --></div>
     <script src="pizza.js"></script>
