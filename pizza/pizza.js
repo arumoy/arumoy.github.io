@@ -1,6 +1,5 @@
 var dough = document.getElementById("dough");
 var pizzaId = 1;
-var showPics = false;
 
 class Pizza {
     constructor(name, radius, price) {
@@ -11,7 +10,6 @@ class Pizza {
         this.pricePerSqRadius = (this.price / this.area).toFixed(2);
     }
 }
-var pizzasToCompare = [];
 
 function pizzaImage(size) {
     var pizzIm = document.createElement("img")
@@ -21,7 +19,7 @@ function pizzaImage(size) {
 };
 
 function addComparablePizza(id, radius, price, name = "Pizza " + id) {
-    pizzasToCompare.push(new Pizza(name, radius, price));
+    return new Pizza(name, radius, price);
 };
 
 function addPizza() {
@@ -34,9 +32,9 @@ function addPizza() {
     sizeInp.value = nameInp.value = priceInp.value = null;
 
     if (name == null || name == undefined || name === "") {
-        addComparablePizza(pizzaId++, size / 2, price);
+        computePizza(addComparablePizza(pizzaId++, size / 2, price));
     } else {
-        addComparablePizza(pizzaId++, size / 2, price, name);
+        computePizza(addComparablePizza(pizzaId++, size / 2, price, name));
     }
 }
 
@@ -71,38 +69,22 @@ function headerOf(...data) {
     return row;
 }
 
-function computeVisualFlag() {
-    var visInp = document.getElementById("compare-vis");
-    showPics = visInp.checked;
-}
-
 function sizeOf(radius) {
     return radius *2;
 }
 
-function computePizza() {
-    computeVisualFlag();
-    var table = document.createElement("table");
-    table.id = "pizzalysis";
-    if (!showPics) {
-        table.appendChild(headerOf("Pizza Name", "Area (sq. Unit)", "Price (₹)", "Price per sq. Unit"))
-        pizzasToCompare.forEach(function (pizza, _, _) {
-            table.appendChild(rowOf(pizza.name, pizza.area, pizza.price, pizza.pricePerSqRadius))
-        });
-    } else {
-        table.appendChild(headerOf("Pizza Name", "Area (sq. Unit)", "Price (₹)", "Price per sq. Unit", "Comparative Size"))
-        pizzasToCompare.forEach(function (pizza, _, _) {
-            var pizim = pizzaImage(sizeOf(pizza.radius));
-            table.appendChild(rowOf(pizza.name, pizza.area, pizza.price, pizza.pricePerSqRadius, pizim));
-        });
+function computePizza(pizza) {
+    var table = document.getElementById("pizzalysis");
+    if (table == null) {
+        table = document.createElement("table");
+        table.id = "pizzalysis";
+        document.getElementById("furnace").appendChild(table);
+        table.appendChild(headerOf("Pizza Name", "Area (sq. Unit)", "Price (₹)", "Price per sq. Unit", "Comparative Size"));
     }
-    document.getElementById("furnace").appendChild(table);
+    var pizim = pizzaImage(sizeOf(pizza.radius));
+    table.appendChild(rowOf(pizza.name, pizza.area, pizza.price, pizza.pricePerSqRadius, pizim));
 }
 
 function clearTable() {
     document.getElementById("furnace").innerHTML = null;
-}
-
-function clearData() {
-    pizzasToCompare = [];
 }
