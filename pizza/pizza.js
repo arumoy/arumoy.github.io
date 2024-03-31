@@ -40,8 +40,19 @@ function addPizza() {
     }
 }
 
+function deleteButtonOf(rowId) {
+    var deleteButton = document.createElement("button");
+    deleteButton.addEventListener("click", function() {
+        document.getElementById(rowId)?.remove();
+        console.log("hit " + rowId);
+    })
+    deleteButton.textContent = '🗑️';
+    return deleteButton;
+}
+
 function rowOf(...data) {
     var row = document.createElement("tr");
+    row.id = Math.random(1000);
     data.forEach(function (d, index, rowData) {
         var val = document.createElement("td");
         val.classList.add("pizza-data")
@@ -57,6 +68,7 @@ function rowOf(...data) {
         }
         row.appendChild(val);
     });
+    row.appendChild(deleteButtonOf(row.id));
     return row;
 }
 
