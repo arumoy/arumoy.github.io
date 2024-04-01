@@ -6,6 +6,7 @@ class Pizza {
         this.radius = radius;
         this.name = name;
         this.price = price;
+        this.size = this.radius * 2;
         this.area = (Math.PI * (radius ** 2)).toFixed(2);
         this.pricePerSqRadius = (this.price / this.area).toFixed(2);
     }
@@ -93,10 +94,10 @@ function computePizza(pizza) {
         table = document.createElement("table");
         table.id = "pizzalysis";
         document.getElementById("furnace").appendChild(table);
-        table.appendChild(headerOf("Pizza Name", "Area (sq. Unit)", "Price (₹)", "Price per sq. Unit", "Comparative Size"));
+        table.appendChild(headerOf("Pizza Name", "Size (Unit)", "Area (sq. Unit)", "Price (₹)", "Price per sq. Unit", "Comparative Size"));
     }
     var pizim = pizzaImage(sizeOf(pizza.radius));
-    table.appendChild(rowOf(pizza.name, pizza.area, pizza.price, pizza.pricePerSqRadius, pizim));
+    table.appendChild(rowOf(pizza.name, pizza.size, pizza.area, pizza.price, pizza.pricePerSqRadius, pizim));
 }
 
 function clearTable() {
