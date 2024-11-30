@@ -1,0 +1,11 @@
+.swalpaAdjust {
+  margin-left: 1%;
+}
+
+.pizzaForm {
+  background-color: rgba(254, 248, 217, 0.82);
+  padding: 3%;
+  border: rgb(240, 204, 23) 2px solid;
+  border-radius: 10px;
+  overflow: hidden;
+}

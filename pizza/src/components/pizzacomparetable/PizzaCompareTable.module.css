@@ -1,0 +1,44 @@
+.wholeTable {
+  border: rgb(0, 0, 0) 2px solid;
+  margin: 2px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.leftWing {
+  text-align: left;
+}
+
+.rightWing {
+  text-align: right;
+}
+
+.currencyUnit {
+  float: left;
+}
+
+.bgHead {
+  background-color: rgb(255, 246, 193);
+  color: white;
+}
+
+.bgClear {
+  background-color: transparent !important;
+}
+
+.deleteButton {
+  width: 20px;
+  height: 20px;
+  text-align: center !important;
+  vertical-align: middle !important;
+  padding: 0 !important;
+  margin: 0px !important;
+  border: rgb(255, 255, 255, 0) 0px solid;
+  border-radius: 50% !important;
+  display: inline-block;
+}
+
+.deleteMark {
+  font-size: 150%;
+  transform: translateY(-27%) translateX(2%);
+}
